@@ -3,7 +3,7 @@
   <title></title>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="Cartes_IGN20160301190850840" name="Cartes IGN">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="osm_raster20160301192016946" name="osm_raster">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -11,73 +11,77 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>772627.56892093783244491</xmin>
-      <ymin>6811940.64442232064902782</ymin>
-      <xmax>779719.82093934249132872</xmax>
-      <ymax>6817558.63053916208446026</ymax>
+      <xmin>-21039383.75699999928474426</xmin>
+      <ymin>-21039383.75699999183416367</ymin>
+      <xmax>21039383.75699999928474426</xmax>
+      <ymax>21039383.75699998438358307</ymax>
     </extent>
     <rotation>0</rotation>
-    <projections>0</projections>
+    <projections>1</projections>
     <destinationsrs>
       <spatialrefsys>
-        <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-        <srsid>145</srsid>
-        <srid>2154</srid>
-        <authid>EPSG:2154</authid>
-        <description>RGF93 / Lambert-93</description>
-        <projectionacronym>lcc</projectionacronym>
-        <ellipsoidacronym>GRS80</ellipsoidacronym>
+        <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs</proj4>
+        <srsid>3857</srsid>
+        <srid>3857</srid>
+        <authid>EPSG:3857</authid>
+        <description>WGS 84 / Pseudo Mercator</description>
+        <projectionacronym>merc</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
         <geographicflag>false</geographicflag>
       </spatialrefsys>
     </destinationsrs>
-    <layer_coordinate_transform_info/>
+    <layer_coordinate_transform_info>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:900913" srcDatumTransform="-1" destDatumTransform="-1" layerid="osm_raster20160301192016946"/>
+    </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
-      <item>Cartes_IGN20160301190850840</item>
+      <item>osm_raster20160301192016946</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Cartes IGN" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="osm_raster" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Cartes_IGN20160301190850840" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="osm_raster20160301192016946" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
   <projectlayers layercount="1">
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <id>Cartes_IGN20160301190850840</id>
-      <datasource>contextualWMSLegend=0&amp;crs=EPSG:2154&amp;dpiMode=7&amp;featureCount=10&amp;format=image/jpeg&amp;layers=GEOGRAPHICALGRIDSYSTEMS.MAPS&amp;password=2969mael&amp;styles=&amp;url=https://wxs.ign.fr/qgy2lxzseldldu42wvgdawt9/geoportail/r/wms?request%3DGetCapabilities&amp;username=eric-pommereau</datasource>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <id>osm_raster20160301192016946</id>
+      <datasource>../../conf/osm_raster.xml</datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Cartes IGN</layername>
+      <layername>osm_raster</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>145</srsid>
-          <srid>2154</srid>
-          <authid>EPSG:2154</authid>
-          <description>RGF93 / Lambert-93</description>
-          <projectionacronym>lcc</projectionacronym>
-          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +over +no_defs</proj4>
+          <srsid>28234</srsid>
+          <srid>900913</srid>
+          <authid>EPSG:900913</authid>
+          <description>Google Mercator</description>
+          <projectionacronym>merc</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
       <customproperties>
-        <property key="identify/format" value="Undefined"/>
+        <property key="identify/format" value="Value"/>
       </customproperties>
-      <provider>wms</provider>
+      <provider>gdal</provider>
       <noData>
         <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
       </noData>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer opacity="1" alphaBand="0" band="1" type="singlebandcolordata">
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
           <rasterTransparency/>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0"/>
@@ -117,7 +121,7 @@
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
     <Measure>
-      <Ellipsoid type="QString">NONE</Ellipsoid>
+      <Ellipsoid type="QString">WGS84</Ellipsoid>
     </Measure>
     <WMSPrecision type="QString">8</WMSPrecision>
     <WFSTLayers>
@@ -158,10 +162,10 @@
       <filterByMap type="bool">false</filterByMap>
     </Legend>
     <SpatialRefSys>
-      <ProjectCRSProj4String type="QString">+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
-      <ProjectCrs type="QString">EPSG:2154</ProjectCrs>
-      <ProjectCRSID type="int">145</ProjectCRSID>
-      <ProjectionsEnabled type="int">0</ProjectionsEnabled>
+      <ProjectCRSProj4String type="QString">+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs</ProjectCRSProj4String>
+      <ProjectCrs type="QString">EPSG:3857</ProjectCrs>
+      <ProjectCRSID type="int">3857</ProjectCRSID>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
     </SpatialRefSys>
     <DefaultStyles>
       <Fill type="QString"></Fill>
