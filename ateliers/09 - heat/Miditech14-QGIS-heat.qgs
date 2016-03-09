@@ -1,7 +1,7 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
 <qgis projectname="" version="2.12.1-Lyon">
   <title></title>
-  <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
+  <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="relais_corse20160302183254295" name="relais-corse">
       <customproperties/>
@@ -9,18 +9,15 @@
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="communes_corse20160308213011788" name="communes-corse">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="Cartes_IGN20160308154424970" name="Cartes IGN">
-      <customproperties/>
-    </layer-tree-layer>
   </layer-tree-group>
   <relations/>
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>1122294.24448467209003866</xmin>
-      <ymin>6082128.07784352079033852</ymin>
-      <xmax>1336105.37694235960952938</xmax>
-      <ymax>6217513.45694446191191673</ymax>
+      <xmin>1153744.20974054164253175</xmin>
+      <ymin>6041148.13734208233654499</ymin>
+      <xmax>1251386.44341916660778224</xmax>
+      <ymax>6235383.46726842783391476</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -61,7 +58,6 @@
   <layer-tree-canvas>
     <custom-order enabled="0">
       <item>relais_corse20160302183254295</item>
-      <item>Cartes_IGN20160308154424970</item>
       <item>communes_corse20160308213011788</item>
     </custom-order>
   </layer-tree-canvas>
@@ -76,54 +72,8 @@
         <legendlayerfile isInOverview="0" layerid="communes_corse20160308213011788" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Cartes IGN" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Cartes_IGN20160308154424970" visible="0"/>
-      </filegroup>
-    </legendlayer>
   </legend>
-  <projectlayers layercount="3">
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <id>Cartes_IGN20160308154424970</id>
-      <datasource>contextualWMSLegend=0&amp;crs=EPSG:2154&amp;dpiMode=7&amp;featureCount=10&amp;format=image/jpeg&amp;layers=GEOGRAPHICALGRIDSYSTEMS.MAPS&amp;password=2969mael&amp;styles=&amp;url=https://wxs.ign.fr/qgy2lxzseldldu42wvgdawt9/geoportail/r/wms?request%3DGetCapabilities&amp;username=eric-pommereau</datasource>
-      <title></title>
-      <abstract></abstract>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>Cartes IGN</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=lcc +lat_1=49 +lat_2=44 +lat_0=46.5 +lon_0=3 +x_0=700000 +y_0=6600000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>145</srsid>
-          <srid>2154</srid>
-          <authid>EPSG:2154</authid>
-          <description>RGF93 / Lambert-93</description>
-          <projectionacronym>lcc</projectionacronym>
-          <ellipsoidacronym>GRS80</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Undefined"/>
-      </customproperties>
-      <provider>wms</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="0" band="1" type="singlebandcolordata">
-          <rasterTransparency/>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="220" colorizeOn="1" colorizeRed="220" colorizeBlue="220" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
+  <projectlayers layercount="2">
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>communes_corse20160308213011788</id>
       <datasource>../../datas/corse/communes-corse.shp</datasource>
@@ -403,13 +353,14 @@
       <SingleCategoryDiagramRenderer diagramType="Pie">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" sizeType="MM" minScaleDenominator="-4.65661e-10">
           <fontProperties description=".SF NS Text,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" showAll="1"/>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <featformsuppress>0</featformsuppress>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <editorlayout>generatedlayout</editorlayout>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -799,8 +750,8 @@
     <Digitizing>
       <DefaultSnapToleranceUnit type="int">1</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
-        <value>relais_corse20160302183254295</value>
         <value>communes_corse20160308213011788</value>
+        <value>relais_corse20160302183254295</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
         <value>disabled</value>
